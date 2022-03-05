@@ -1,0 +1,30 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <p>
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" ngModel>
+  </p>
+  <p>
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" ngModel>
+  </p>
+  <p>
+    <label for="address">Address</label>
+    <input type="address" id="address" name="address" ngModel>
+  </p>
+  <p>
+    <label for="DOB">Date of Birth</label>
+    <input type="date" id="DOB" name="DOB" ngModel>
+  </p>
+  <p>
+    <select name="position" ngModel>
+      <option [ngValue]="c.id" *ngFor="let c of positionList">
+        {{c.name}}
+      </option>
+    </select>
+  </p>
+  <p>
+    <label for="DOJ">Date of Joining</label>
+    <input type="date" id="DOJ" name="DOJ" ngModel>
+  </p>
+  <p><button type="submit">Submit</button></p>
+</form>
